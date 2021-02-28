@@ -63,8 +63,8 @@ RSpec.describe Post, type: :model do
     post.body = '12345'
     expect(post).to be_valid
 
-    hundred_char_string = '2YaRjEbx9oXSxPpMwrI51GEdBseuJDrbFzD1XOxIhdyIPkoqlIgrpAekSFdAJdkbdZRIwKWZ4Ia8YGWAmTzTFvqQ7ysdk02lZ6GQ
-    '
+    hundred_char_string = '2YaRjEbx9oXSxPpMwrI51GEdBseuJDrbFzD1XOxIhdyIPkoqlIgrpAekSFdAJdkbdZRIwKWZ4Ia8YGWAmTzTFvqQ7ysdk02lZ6GQ'
+
     post.body = hundred_char_string
     expect(post).to be_valid
   end
