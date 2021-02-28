@@ -37,7 +37,16 @@ RSpec.describe Post, type: :model do
   end
 
   it 'has a title at least 2 characters long' do
+    post = Post.new(
+      title = "valid title",
+      body: '',
+      user: current_user,
+      views: 0
+    )
+    expect(post).to_not be_valid
 
+    post.title = '12'
+    expect(post).to be_valid
   end
 
   it 'has a body between 5 and 100 chracters' do
