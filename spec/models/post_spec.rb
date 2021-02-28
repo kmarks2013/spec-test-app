@@ -49,6 +49,8 @@ RSpec.describe Post, type: :model do
     expect(post).to be_valid
   end
 
+  # this test should normally be broken up into multiple tests to check 5 chracters, and 100 characters
+
   it 'has a body between 5 and 100 chracters' do
 
   end
