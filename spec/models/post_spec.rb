@@ -38,8 +38,8 @@ RSpec.describe Post, type: :model do
 
   it 'has a title at least 2 characters long' do
     post = Post.new(
-      title = "valid title",
-      body: '',
+      title = "",
+      body: 'has a body',
       user: current_user,
       views: 0
     )
