@@ -52,7 +52,16 @@ RSpec.describe Post, type: :model do
   # this test should normally be broken up into multiple tests to check 5 chracters, and 100 characters
 
   it 'has a body between 5 and 100 chracters' do
+    post = Post.new(
+      title = "valid title",
+      body: '',
+      user: current_user,
+      views: 0
+    )
+    expect(post).to_not be_valid
 
+    post.body = '12345'
+    expect(post).to be_valid
   end
 
   it ' has numerical views' do
