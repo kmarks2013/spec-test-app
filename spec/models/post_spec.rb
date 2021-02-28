@@ -26,7 +26,7 @@ RSpec.describe Post, type: :model do
 
   it 'has a body' do
       post = Post.new(
-        title = "valid title",
+        title: "valid title",
         body: '',
         user: current_user,
         views: 0
@@ -38,7 +38,7 @@ RSpec.describe Post, type: :model do
 
   it 'has a title at least 2 characters long' do
     post = Post.new(
-      title = "",
+      title: "",
       body: 'has a body',
       user: current_user,
       views: 0
@@ -53,7 +53,7 @@ RSpec.describe Post, type: :model do
 
   it 'has a body between 5 and 100 chracters' do
     post = Post.new(
-      title = "valid title",
+      title: "valid title",
       body: '',
       user: current_user,
       views: 0
