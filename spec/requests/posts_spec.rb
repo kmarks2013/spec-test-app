@@ -15,6 +15,9 @@
 RSpec.describe "/posts", type: :request do
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.
+  current_user = User.first_or_create!(email: 'testcase@example.com', password: 'password', password_confirmation: 'password')
+
+
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
   }
