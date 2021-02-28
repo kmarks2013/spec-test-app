@@ -21,7 +21,7 @@ RSpec.describe Post, type: :model do
     expect(post).to_not be_valid
 
     post.title = "Has a title"
-    expect(post) to be_valid
+    expect(post).to be_valid
   end
 
   it 'has a body' do
