@@ -9,4 +9,24 @@ RSpec.describe Post, type: :model do
   # another test will validate that there is a current user before you get to this page.
 
   current_user = User.find_or_create!(email: 'testcase@example.com', password: 'password', password_confirmation: 'password')
+
+  it 'has a title' do
+
+  end
+
+  it 'has a body' do
+
+  end
+
+  it 'has a title at least 2 characters long' do
+
+  end
+
+  it 'has a body between 5 and 100 chracters' do
+
+  end
+
+  it ' has numerical views' do
+
+  end
 end
