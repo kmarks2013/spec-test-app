@@ -73,6 +73,12 @@ RSpec.describe Post, type: :model do
   end
 
   it ' has numerical views' do
-
+    post = Post.new(
+      title: "has a title",
+      body: 'has a body',
+      user: current_user,
+      views: 0
+    )
+    expect(post.views).to be_a(Integer)
   end
 end
