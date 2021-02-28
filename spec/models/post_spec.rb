@@ -8,7 +8,7 @@ RSpec.describe Post, type: :model do
       #  before_action authenticate_user!
   # another test will validate that there is a current user before you get to this page.
 
-  current_user = User.find_or_create!(email: 'testcase@example.com', password: 'password', password_confirmation: 'password')
+  current_user = User.first_or_create!(email: 'testcase@example.com', password: 'password', password_confirmation: 'password')
 
   it 'has a title' do
     post = Post.new(
