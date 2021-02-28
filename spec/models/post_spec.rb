@@ -67,6 +67,9 @@ RSpec.describe Post, type: :model do
 
     post.body = hundred_char_string
     expect(post).to be_valid
+
+    post.body = hundred_char_string + '1'
+    expect(post).to_not be_valid
   end
 
   it ' has numerical views' do
